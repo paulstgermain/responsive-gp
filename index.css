@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Roboto+Mono:wght@400;700&display=swap');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	/* border: 0; */
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* GENERAL STYLES */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: 'Roboto Mono', monospace;
+    color: #4f4f4f;
+}
+
+h1 {
+    font-family: 'Chelsea Market', cursive;
+    font-size: 5rem;
+}
+
+span {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    padding: 4% 0;
+}
+
+/* NAV STYLES START */
+
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }
+
+nav {
+    padding: 2% 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    display: inline-block;
+    padding: 1% 0;
+    width: 10%;
+    border-radius: 10px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.orange {
+    background-color: #FF764E
+}
+
+.blue {
+    background-color: #5ED3EB;
+}
+
+.yellow {
+    background-color: #FFCD69;
+}
+
+/* HEADER SECTION STYLES START */
+
+header {
+    display: flex;
+    justify-content: space-around;
+    padding: 4% 0;
+}
+
+.image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    border-radius: 50%;
+    width: 60%;
+}
+
+.title {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title div {
+    width: 80%;
+}
+
+/* MAIN SECTION STYLES START */
+
+.main div {
+    background-color: #DDB9A3;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2%;
+    color: #ffffff;
+}
+
+.main div p {
+    margin: 1% 0;
+}
+
+/* CAMP SECTION STYLES START */
+
+.camp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.camp div {
+    width: 35%;
+    text-align: center;
+}
+
+.camp div img {
+    width: 80%;
+}
+
+/* BACKGROUND IMAGE SECTION STYLES START */
+
+.bg-img {
+    background-image: url("assets/footer_img.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 40vh;
+}
+
+/* FOOTER SECTION STYLES START */
+
+footer {
+    background-color: #F9E7DC;
+}
+
+/* MEDIA QUERIES */
+
+/* TABLET VIEW */
+
+/* this rule is for 800px screen or smaller */
+@media (max-width: 800px) {
+    nav a {
+        width: 15%;
+    }
+
+    /* header section styles */
+
+    .image img {
+        width: 80%;
+    }
+
+    /* camp section styles */
+
+    .camp div {
+        width: 45%;
+    }
+
+    /* background image section */
+
+    .bg-img {
+        height: 60vh;
+        background-position: center;
+    }
+}
+
+/* PHONE VIEW */
+@media (max-width: 500px) {
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav a {
+        width: 50%;
+        margin: 2% 0;
+    }
+
+    /* header styles */
+
+    header {
+        flex-wrap: wrap;
+
+    }
+
+    .image {
+        width: 80%;
+    }
+
+    .title {
+        width: 80%;
+        margin-top: 4%;
+    }
+
+    .title div {
+        width: 100%;
+    }
+
+    /* camp section styles */
+
+    .camp div {
+        width: 80%;
+    }
+
+    .camp div img {
+        width: 60%;
+    }
+
+    /* bg img section */
+
+    .bg-img {
+        height: 40vh;
+    }
+}
